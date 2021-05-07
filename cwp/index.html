@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crypt Work Board</title>
+<!-- The three following lines — trust me — we need this-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <style type="text/css">
+    body{
+      text-align: left;
+      margin: 10;
+      font-family: Verdana, Arial, sans-serif;
+      font-size: 16px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h2 align="center">Text editor with auto-save</h2>
+<br></br>
+  <h3 align="center"> Board 1 </h3>
+  <div align="center">
+  <div id="editor" contenteditable="true" style="height: 100%; width: 70%; border: solid; border-width: 1px; padding 15px;"></div>
+  </div>
+  <br></br>
+    <h3 align="center"> Board 2 </h3>
+    <div align="center">
+    <div id="editor" contenteditable="true" style="height: 100%; width: 70%; border: solid; border-width: 1px; padding 15px;"></div>
+    </div>
+
+  <script>
+
+    if (localStorage.getItem('text_in_editor') !== null) {
+
+        document.getElementById('editor').innerHTML = localStorage.getItem('text_in_editor');
+      }
+
+    document.addEventListener('keydown', function(e) {
+
+      localStorage.setItem('text_in_editor', document.getElementById('editor').innerHTML);
+    });
+  </script>
+
+  <p> notes: need to test storage on server and how it plays with other browsers, OS, ETC. See if it cross saves for everyone? </p>
+
+</body>
+</html>
