@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Crypt Work Board</title>
+  <title>Crypt Writer</title>
 <!-- The three following lines — trust me — we need this-->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,42 +10,100 @@
 
   <style type="text/css">
     body{
-      text-align: left;
+      text-align: center;
       margin: 10;
       font-family: Verdana, Arial, sans-serif;
       font-size: 16px;
     }
+    *{
+           box-sizing: border-box;
+       }
+     div {
+           padding: 10px;
+           background-color: ;
+           overflow: hidden;
+       }
+     input[type=text], textarea, select {
+           width: 100%;
+           padding: 12px;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+       }
+       input[type=button]{
+           width: auto;
+           float: right;
+           cursor: pointer;
+           padding: 7px;
+       }
+       textarea {
+    text-align:center;
+    -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+     -o-box-sizing: border-box;
+        box-sizing: border-box;
+    display:inline-block;
+}
   </style>
 
 </head>
 <body>
+  <script type="text/javascript" src="autosave.js"></script>
+  <script type="text/javascript" src="loader.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function(){
+              AutoSave.start();
+          })
 
-  <h2 align="center">Text editor with auto-save</h2>
+          $(window).unload(function(){
+              AutoSave.stop();
+          });
+      </script>
+
 <br></br>
-  <h3 align="center"> Board 1 </h3>
-  <div align="center">
-  <div id="editor" contenteditable="true" style="height: 100%; width: 70%; border: solid; border-width: 1px; padding 15px;"></div>
-  </div>
-  <br></br>
-    <h3 align="center"> Board 2 </h3>
-    <div align="center">
-    <div id="editor" contenteditable="true" style="height: 100%; width: 70%; border: solid; border-width: 1px; padding 15px;"></div>
-    </div>
+  <h3 align="center"> Crypt Writer </h3>
+  <div>
+             <textarea id="msg" name="msg" style="height:200px"></textarea>
+         </div>
+         <div>
+           <input type="button" id="bt" value="Save project to pc" onclick="saveFile()" />
+       </div>
 
-  <script>
+  <h4 align="center"> CRYPT WRITING STANDARDS </h4>
+    <p align="center"> Headings are distinguished by UPPER CASE characters. <br> Emphasis is distinguished by a * at the beginning and the end of the intended word  <br> ** at the end of a sentence signifies further writings/notes found in the annotations section.</p>
 
-    if (localStorage.getItem('text_in_editor') !== null) {
 
-        document.getElementById('editor').innerHTML = localStorage.getItem('text_in_editor');
-      }
-
-    document.addEventListener('keydown', function(e) {
-
-      localStorage.setItem('text_in_editor', document.getElementById('editor').innerHTML);
-    });
-  </script>
-
-  <p> notes: need to test storage on server and how it plays with other browsers, OS, ETC. See if it cross saves for everyone? </p>
 
 </body>
+<script>
+    let saveFile = () => {
+
+
+        const msg = document.getElementById('msg');
+
+        let data =
+
+            'Message: ' + msg.value;
+
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = 'formData.txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+
+      newLink.click();
+    }
+
+</script>
 </html>
