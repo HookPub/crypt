@@ -49,7 +49,7 @@
 </head>
 <body>
   <script type="text/javascript" src="autosave.js"></script>
-  <script type="text/javascript" src="loader.js"></script>
+  <script type="text/javascript" src="ppsystem.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
       <script type="text/javascript">
           $(document).ready(function(){
@@ -68,7 +68,10 @@
          </div>
          <div>
            <input type="button" id="bt" value="Save project to pc" onclick="saveFile()" />
+           <input type="file" id="fileToLoad">
+           <button onclick="loadFileAsText()">Load Selected File</button>
        </div>
+
 
 
   <h4 align="center"> CRYPT WRITING STANDARDS </h4>
@@ -77,34 +80,4 @@
 
 
 </body>
-<script>
-    let saveFile = () => {
-
-
-        const msg = document.getElementById('msg');
-
-        let data =
-
-            'Message: ' + msg.value;
-
-        const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = 'formData.txt';	   // The file to save the data.
-
-        let newLink = document.createElement("a");
-        newLink.download = sFileName;
-
-        if (window.webkitURL != null) {
-            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-        }
-        else {
-            newLink.href = window.URL.createObjectURL(textToBLOB);
-            newLink.style.display = "none";
-            document.body.appendChild(newLink);
-        }
-
-
-      newLink.click();
-    }
-
-</script>
 </html>
