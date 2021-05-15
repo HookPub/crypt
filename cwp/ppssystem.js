@@ -5,10 +5,10 @@ let saveFile = () => {
 
     let data =
 
-        'Message: ' + msg.value;
+        msg.value;
 
     const textToBLOB = new Blob([data], { type: 'text/plain' });
-    const sFileName = 'formData.txt';	   // The file to save the data.
+    const sFileName = 'Document.txt';	   // The file to save the data.
 
     let newLink = document.createElement("a");
     newLink.download = sFileName;
