@@ -23,9 +23,32 @@
   li a:hover {
     background-color: #111;
   }
-</style>
 
-<h1> If you dont know what this is, leave. </h1>
+  .container {
+    position: relative;
+   text-align: center;
+    color: black;
+  }
+
+  .centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+</style>
+<script>
+  function Write(variable) {
+    document.write(variable);
+}
+
+//news lines
+var nl1 = "Crypt Website underway.";
+var nl2 = "The Crypt's social club now has 16 members."
+
+</script>
+<p1> If you dont know what this is, leave. </p1>
 
 
 <div align="center">
@@ -43,17 +66,11 @@
   </ul>
 
   <br> </br>
-  <br> </br>
 
-  <div align="center">
-  <a href=""> <img src="src/news.png"></a>
-    </div>
-
-  <br> </br>
-  <br> </br>
-  <br> </br>
-  <br> </br>
-
+  <div align="center" class="container">
+   <img src="src/newsdiv.png">
+   <div class="centered"> <p>  <script>Write(nl1)</script> </p> <p>  <script>Write(nl2)</script> </p>
+ </div>
   <div align="right">
   <a href="https://discord.gg/WPWHBvBhJU"> <img src="src/scpic.png"></a>
     </div>
