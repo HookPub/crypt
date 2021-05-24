@@ -47,7 +47,7 @@ var AutoSave = (function(){
 				timer = null;
 			}
 
-			timer = setInterval(save, 0);
+			timer = setInterval(save, 1000);
 
 
 		},
