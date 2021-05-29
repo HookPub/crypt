@@ -1,0 +1,22 @@
+{
+  "name": "Crypt",
+  "version": "0.0.1",
+  "description": "The Crypt Platform",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "text",
+    "adventure",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "FHOOK",
+  "license": "SUCKMYDICKs",
+  "devDependencies": {
+    "electron": "^12.0.7"
+  }
+}
