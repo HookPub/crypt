@@ -1,0 +1,10 @@
+Submission Guide
+
+Basic guide:
+1. Fork repo by clicking the fork button in the top right.
+2. pull repo to your computer
+3. Add writings to 'clib' folder
+4.update "clib/yourdoc" to the right filename and 'Title' to the name of your doc.
+5. Push to your forked repo then click the Contribute button beneath the repo settings.
+6. Put your desired pen name or discord tag in the pull request information and what you are submitting.
+7.all submissions will be on the site with 4-6 hours.
