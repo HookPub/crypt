@@ -1,9 +1,9 @@
-Submission Guide
+Submission Guide (NOT UP TO DATE WILL UPDATE SOON)
 
 Basic guide:
 1. Fork repo by clicking the fork button in the top right.
 2. pull repo to your computer (Cmd's: 'git remote add https://github.com/yourusername/crypt.git origin master' & 'git pull origin master')
-3. Add writings to 'clib' folder
+3. Add writings/content to 'usrcontnt' folder located in the 'clib' folder.
 4. update "clib/yourdoc" to the right filename and 'Title' to the name of your doc in the (Located at the bottom div in clib.html)
 4.1 commit your changes 'git commit -m "type of work submitted" '
 5. Push to your forked repo ('git push origin master') then click the Contribute button beneath the repo settings.
