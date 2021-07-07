@@ -4,7 +4,7 @@
 
 - Open CMD Prompt (windows) or terminal (Linux).
 
-- cd this directory (if you saved it on the desktop the command is: cd desktop/crypt/clib/ProfileBuilder
+- cd this directory (if you saved it on the desktop the command is: cd desktop/crypt/clib/ProfileBuilder or on linux if its in 'home' the command is cd crypt/clib/ProfileBuilder)
 
 - Type the type of profile you want .py and it will build it for you.
 
