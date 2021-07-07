@@ -2,6 +2,8 @@
 
 - Have [Python](https://www.python.org/downloads/) installed
 
+- Have thie repo pulled to your desktop. (open terminal on desktop then git pull https://github.com/HookPub/crypt.git)
+
 - Open CMD Prompt (windows) or terminal (Linux).
 
 - cd this directory (if you saved it on the desktop the command is: cd desktop/crypt/clib/ProfileBuilder or on linux if its in 'home' the command is cd crypt/clib/ProfileBuilder)
