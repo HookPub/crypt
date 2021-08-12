@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 
 
   <style type="text/css">
@@ -46,10 +45,21 @@
 }
   </style>
 
+
 </head>
 <body>
-  <script type="text/javascript" src="autosave.js"></script>
   <script type="text/javascript" src="ppssystem.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="autosave.js"></script>
+  <script type="text/javascript">
+         $(document).ready(function(){
+             AutoSave.start();
+         })
+
+         $(window).unload(function(){
+             AutoSave.stop();
+         });
+     </script>
 
 <br></br>
   <h3 align="center"> Crypt Writer </h3>
@@ -57,11 +67,7 @@
 
   <div>
              <textarea id="msg" name="msg" style="height:200px">
-             <style type="text/css"> css here </style>
-             <h1 align="center"> Heading </h1>
-             <p align="center"> Body </p>
 
-             <p align="center"><a href="../index.html"> Home </a></p>
              </textarea>
          </div>
          <div>
