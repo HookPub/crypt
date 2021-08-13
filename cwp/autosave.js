@@ -1,65 +1,10 @@
-var AutoSave = (function(){
 
-	var timer = null;
+    if (localStorage.getItem('text_in_editor') !== null) {
 
-	function getEditor(){
+        document.getElementById('msg').innerHTML = localStorage.getItem('text_in_editor');
+      }
 
-		var elems = document.getElementsByTagName("textarea")
-		if (elems.length <= 0)
-			return null;
+    document.addEventListener('keydown', function(e) {
 
-		return elems[0];
-	}
-
-
-	function save(){
-
-		var editor = getEditor();
-                if (editor) {
-		    localStorage.setItem("AUTOSAVE_" + document.location, editor.value )
-                }
-
-	}
-
-
-	function restore(){
-
-		var saved = localStorage.getItem("AUTOSAVE_" + document.location)
-		var editor = getEditor();
-		if (saved && editor){
-
-			editor.value = saved;
-		}
-	}
-
-	return {
-
-		start: function(){
-
-			var editor = getEditor();
-
-
-			if (editor.value.length <= 0)
-				restore();
-
-			if (timer != null){
-				clearInterval(timer);
-				timer = null;
-			}
-
-			timer = setInterval(save, 0);
-
-
-		},
-
-		stop: function(){
-
-			if (timer){
-				clearInterval(timer);
-				timer = null;
-			}
-
-		}
-	}
-
-}())
+      localStorage.setItem('text_in_editor', document.getElementById('msg').innerHTML);
+    });
