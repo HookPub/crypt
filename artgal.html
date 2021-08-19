@@ -1,0 +1,163 @@
+<style>
+  ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    max-width: 720px;
+    width: 50%;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #111;
+  }
+
+  .container {
+    position: relative;
+   text-align: center;
+    color: black;
+    padding: 1px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .warning {
+    color: white;
+    padding: 0;
+  }
+
+  body {
+   background-image: url("src/bg.png");
+  }
+
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .column img:hover {
+    opacity: 1;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container {
+    position: relative;
+    display: none;
+  }
+
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+
+  /* Closable button inside the image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+img {
+max-width: 75%;
+height: auto;
+}
+</style>
+<script>
+  function myFunction(imgs) {
+    // Get the expanded image
+    var expandImg = document.getElementById("expandedImg");
+    // Get the image text
+    var imgText = document.getElementById("imgtext");
+    // Use the same src in the expanded image as the image being clicked on from the grid
+    expandImg.src = imgs.src;
+    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+    imgText.innerHTML = imgs.alt;
+    // Show the container element (hidden with CSS)
+    expandImg.parentElement.style.display = "block";
+  }
+</script>
+
+<p3 class="warning"> If you dont know what this is, leave. </p3>
+
+
+<div align="center">
+  <img src="src/header.png">
+  </div>
+
+<br> </br>
+
+  <ul>
+    <li><a href="clib.html">Crypt Library.</a></li>
+    <li><a href="cres.html">Crypt Resources.</a></li>
+    <li><a href="index.html">Crypt Home.</a></li>
+    <li><a href="cwp/index.html">Crypt Writer.</a></li>
+    <li style="float:right"><a class="active" href="src/subguide.html">Submission Guide .</a></li>
+  </ul>
+  <br></br>
+
+  <!-- The grid: four columns -->
+  <div class="row">
+    <div class="column">
+      <img src="src/art/1024px-27Dream_of_Italy27_by_William_Louis_Sonntag2C_Dayton_Art_Institute.png" alt="Nigger" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="src/art/1024px-1607-35_Pesttafel_Augsburg_anagoria.png" alt="Snow" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="src/art/1024px-Aivazovsky_Sunset_over_Yalta.png" alt="Mountains" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="src/art/1024px-Albert_Bierstadt_-_Rocky_Mountain_Landscape_-_Google_Art_Project.png" alt="Lights" onclick="myFunction(this);">
+    </div>
+  </div>
+
+  <!-- The expanding image container -->
+  <div class="container">
+    <!-- Close the image -->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+    <!-- Expanded image -->
+    <img id="expandedImg" style="width:100%">
+
+    <!-- Image text -->
+    <div id="imgtext"></div>
+  </div>
