@@ -113,6 +113,8 @@ height: auto;
     imgText.innerHTML = imgs.alt;
     // Show the container element (hidden with CSS)
     expandImg.parentElement.style.display = "block";
+    window.scrollTo(10, 4);
+
   }
 </script>
 
@@ -135,7 +137,13 @@ height: auto;
   <br></br>
 <p align="center" class="warning"> Click to englarge. </p>
 <p align="center" class="warning"> The <a href="https://discord.gg/RAt8Qr3yvE">social club </a> has an ever expanding gallery, the best of which will be posted here. </p>
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 
+  <img id="expandedImg" style="width:100%">
+
+  <div id="imgtext"></div>
+</div>
   <!-- The grid: four columns -->
   <div class="row">
     <div class="column">
@@ -169,16 +177,24 @@ height: auto;
   <div class="column">
     <img src="src/art/1024px-D098D0B2D0B0D0BD_D09A.png" alt="" onclick="myFunction(this);">
   </div>
-
-
-  <!-- The expanding image container -->
-  <div class="container">
-    <!-- Close the image -->
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-
-    <!-- Expanded image -->
-    <img id="expandedImg" style="width:100%">
-
-    <!-- Image text -->
-    <div id="imgtext"></div>
-  </div>
+  <div class="column">
+  <img src="src/art/1024px-Edward_Lear_-_Plains_of_Bengal2C_from_above_Siligoree_-_Google_Art_Project.png" alt="" onclick="myFunction(this);">
+</div>
+<div class="column">
+  <img src="src/art/1024px-Eugene_VON_GUC389Rard_-_Ferntree_Gully_in_the_Dandenong_Ranges_-_Google_Art_Project.png" alt="" onclick="myFunction(this);">
+</div>
+<div class="column">
+  <img src="src/art/1024px-Evening_in_the_Woods_MET_APS2208.png" alt="" onclick="myFunction(this);">
+</div>
+<div class="column">
+  <img src="src/art/1024px-Frederic_Edwin_Church_-_Storm_in_the_Mountains.png" alt="" onclick="myFunction(this);">
+</div>
+<div class="column">
+  <img src="src/art/1024px-Giovanni_Fattori_069.png" alt="" onclick="myFunction(this);">
+</div>
+<div class="column">
+  <img src="src/art/1024px-Hackert2C_Landschaft_mit_Motiven_des_Englischen_Gartens_in_Caserta2C_1797.png" alt="" onclick="myFunction(this);">
+</div>
+<div class="column">
+  <img src="src/art/1024px-Jasper_Francis_Cropsey_Sunset_Eagle_Cliff.png" alt="" onclick="myFunction(this);">
+</div>
