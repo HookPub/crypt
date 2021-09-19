@@ -2,7 +2,7 @@
 
 - Have [Python](https://www.python.org/downloads/) installed
 
-- Have thie repo pulled to your desktop. (open terminal on desktop then git pull https://github.com/HookPub/crypt.git)
+- Have this repo pulled to your desktop. (open terminal on desktop then git pull https://github.com/HookPub/crypt.git)
 
 - Open CMD Prompt (windows) or terminal (Linux).
 
