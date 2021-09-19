@@ -8,6 +8,6 @@
 
 - cd this directory (if you saved it on the desktop the command is: cd desktop/crypt/clib/ProfileBuilder or on linux if its in 'home' the command is cd crypt/clib/ProfileBuilder)
 
-- Type the type of profile you want .py and it will build it for you.
+- Type the type of profile you want .py (python typeofprofile.py) and it will build it for you.
 
 - Then edit/make your changes, put your files into the usrcontnt folder then update the clib profile directory and then push to the crypt.
