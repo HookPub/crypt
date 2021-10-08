@@ -49,30 +49,36 @@
 </head>
 <body>
   <script type="text/javascript" src="ppssystem.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
-  <script type="text/javascript" src="autosave.js"></script>
 
 <br></br>
   <h3 align="center"> Crypt Writer </h3>
   <p align="center">Minimalist, yet almost feature complete writer and editor. </p>
 
   <div>
-             <textarea id="msg" name="msg" style="height:200px">
+             <textarea id="inputTextToSave"  style="height:200px">
 
              </textarea>
          </div>
-         <div>
-           <input type="button" id="bt" value="Save project to pc" onclick="saveFile()" />
-           <input type="file" id="fileToLoad">
-           <button onclick="loadFileAsText()">Load Selected File</button>
-       </div>
+    <script type="text/javascript" src="autosave.js"></script>
+
+             <td>Filename to Save As:</td>
+             <td><input id="inputFileNameToSaveAs"></input></td>
+             <td><button onclick="saveTextAsFile()">Save Text to File</button></td>
+         </tr>
+         <tr>
+             <td>Select a File to Load:</td>
+             <td><input type="file" id="fileToLoad"></td>
+             <td><button onclick="loadFileAsText()">Load Selected File</button><td>
+         </tr>
+     </table>
+     <br> </br>
+     <button onclick="localStorage.removeItem('inputTextToSave');inputTextToSave.value=''">Clear Text Box</button>
 
        <br> </br>
 
-  <h4 align="center"> CRYPT WRITING STANDARDS </h4>
+  <h4 align="center"> FEATURES: </h4>
   <p align="center"></p>
-    <p align="center">Uses HTML Formatting, inline CSS, etc.</p>
-<p align="center"> *Note: AUTOSAVE IS BROKEN SAVE FREQUENTLY </p>
+    <p align="center">Uses HTML Formatting, inline CSS, Autosave works flawlessly.</p>
     <br> </br>
     <br> </br>
    <br> </br>
