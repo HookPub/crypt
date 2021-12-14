@@ -51,8 +51,45 @@
   font-style: italic;
 }
 
-</style>
+textarea {
+text-align:center;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-o-box-sizing: border-box;
+ box-sizing: border-box;
+display:inline-block;
+}
 
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  text-align:center;
+  width: 100%;
+
+}
+</style>
 
 
 <p3 class="warning"> If you dont know what this is, leave. </p3>
@@ -62,13 +99,14 @@
   </div>
 
 <br> </br>
+<script type="text/javascript" src="js.js"></script>
 
   <ul>
     <li><a href="../../clib.html">Crypt Library.</a></li>
     <li><a href="../../cres.html">Crypt Resources.</a></li>
     <li><a href="../../index.html">Crypt Home.</a></li>
     <li><a href="../../cwp/index.html">Crypt Writer.</a></li>
-    <li style="float:right"><a class="active" href="../../src/subguide.html">Submission Guide .</a></li>
+    <li style="float:right"><a class="" href="../../src/subguide.html">Submission Guide .</a></li>
   </ul>
   <h1 align="center" class="warning">Here you will find a random assortment of ebooks, they will eventually be sorted and the styling fine tuned.</h1>
   <h1 align="center" class="warning">------------------------------------------------------------------------------------------------------------</h1>
@@ -79,13 +117,29 @@
   <iframe src="jekyllandhyde.pdf" width="80%" height="700px">
 </iframe>
 </div>
+<div id="nav" align="center">
+<button type="button" class="collapsible">-Click For Notes-</button>
+<div class="content">
+  <textarea id="inputTextToSave"  style="height:200px; width:300px;">
+
+  </textarea>
+  <script type="text/javascript" src="js.js"></script>
+</div>
+</div>
+
 <div align="center">
   <h1 align="center" class="warning">Industrial Society and its Future</h1>
   <iframe src="fcm.pdf" width="80%" height="700px">
 </iframe>
 </div>
+
 <div align="center">
   <h1 align="center" class="warning">The Myth Of German Villiany</h1>
   <iframe src="mogv.pdf" width="80%" height="700px">
+</iframe>
+</div>
+<div align="center">
+  <h1 align="center" class="warning">Diogenes the Cynic: Sayings and Anecdotes, With Other Popular Moralists</h1>
+  <iframe src="diogenes1.pdf" width="80%" height="700px">
 </iframe>
 </div>
