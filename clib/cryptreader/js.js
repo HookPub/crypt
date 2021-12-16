@@ -30,7 +30,7 @@ var nav = document.getElementById('nav');
       }
 
 
-      inputTextToSave.value = localStorage.getItem('inputTextToSave');
-      inputTextToSave.oninput = () => {
-        localStorage.setItem('inputTextToSave', inputTextToSave.value)
+      inputTextToSave2.value = localStorage.getItem('inputTextToSave2');
+      inputTextToSave2.oninput = () => {
+        localStorage.setItem('inputTextToSave2', inputTextToSave2.value)
       };
