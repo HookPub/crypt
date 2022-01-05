@@ -45,6 +45,11 @@
   .warning {
     color: white;
   }
+  .greeting {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+  }
 
   body {
    background-image: url("src/bg.png");
@@ -87,8 +92,8 @@ var nl4 = "- View the submission guide or join the social club for help submitti
     <li style="float:right"><a class="active" href="src/subguide.html">Submission Guide .</a></li>
   </ul>
 
-  <br> </br>
-
+  <p id="greeting" class="greeting"></p>
+  <script type="text/javascript" src="greeter.js"></script>
   <div align="center" class="container">
    <img src="src/newsdiv.png">
    <div class="centered"> <p>  <script>Write(nl1)</script> </p> <p>  <script>Write(nl2)</script> </p> <p>  <script>Write(nl3)</script> </p> <p>  <script>Write(nl4)</script> </p>
