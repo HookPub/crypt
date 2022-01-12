@@ -15,18 +15,3 @@ else {
 document.getElementById("greeting").innerHTML = greeting;
 
 // ^ Index greeter
-
-const wtime = new Date().getHours();
-let wgreeting;
-if (time < 11) {
-  wgreeting = "Good morning, Western Man. Ready to write?";
-}
-else if (time > 11) {
-  wgreeting = "Good afternoon, Western Man. Time to work.";
-}
- else {
-  wgreeting = "Ready to write, Western Man?";
-}
-document.getElementById("wgreeting").innerHTML = wgreeting;
-
-//Writer Greeter

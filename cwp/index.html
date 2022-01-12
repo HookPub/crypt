@@ -83,11 +83,21 @@
   <h4 align="center"> FEATURES: </h4>
   <p align="center"></p>
     <p align="center">Can edit/create anything, put your desired file type after the name when saving your file (example: .html) and it will save it as such. <br> Autosave works flawlessly. <br> Mobile friendly.</p>
-
     <p id="wgreeting" class="greeting"></p>
-    <script type="text/javascript" src="../greeter.js"></script>
-    <br> </br>
-
+    <script type="text/javascript">
+    const wtime = new Date().getHours();
+    let wgreeting;
+    if (wtime < 11) {
+      wgreeting = "Good morning, Western Man. Ready to write?";
+    }
+    else if (wtime > 11) {
+      wgreeting = "Good afternoon, Western Man. Time to work.";
+    }
+     else {
+      wgreeting = "Ready to write, Western Man?";
+    }
+    document.getElementById("wgreeting").innerHTML = wgreeting;
+    </script>
 
 <p><a href="../index.html"> Home </a></p>
 </body>
