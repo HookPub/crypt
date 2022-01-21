@@ -3,7 +3,7 @@ let greeting;
 if (time < 11) {
   greeting = "Good morning, Western Man.";
 }
-else if (time > 11 < 15) {
+else if (time > 11 > 15) {
   greeting = "Good afternoon, Western Man.";
 }
 else {
