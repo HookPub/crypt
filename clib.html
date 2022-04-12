@@ -69,6 +69,11 @@
     width: 1000px;
     height: 250px;
   }
+  .test4 {
+    background-image: url("src/syndiv.png");
+    width: 1000px;
+    height: 150px;
+  }
   .monkey
   {
     font-size: 0;
@@ -82,6 +87,13 @@ padding-bottom: 160px
   color: white;
   font-size: 30px;
   text-align: center;
+}
+.yes a {
+  font-size: 25px;
+  color:black;
+}
+.yes2 a {
+  color:black;
 }
 </style>
 
@@ -109,27 +121,27 @@ padding-bottom: 160px
 <script type="text/javascript">
 const wtime = new Date().getHours();
 let wgreeting;
-if (wtime < 11) {
+if (wtime < 12) {
   wgreeting = "Good morning, Western Man. Ready to read?";
 }
-else if (wtime > 11 > 15) {
+else if (wtime < 17) {
   wgreeting = "Good afternoon, Western Man. Time to learn.";
 }
  else {
-  wgreeting = "Ready to read, Western Man?";
+  wgreeting = "Good evening, Western Man.";
 }
 document.getElementById("wgreeting").innerHTML = wgreeting;
 </script>
     <div align="center">
-     <div class="test2"> <h1> Crypt Compendium </h1> <p> Briefs:</p> <p><a href="https://docs.google.com/document/d/1F1cnyW7msQIviKmEVhButECgcdX-9SnW6HHCzb3tR3s/edit?usp=sharing"> Shiny metal rocks and their byproducts.</a></p>  <p><a href="https://www.enterthecrypt.net/cr/others.html">The Others (WIP) </a></p> <p><a href="https://docs.google.com/document/d/1HwzEi_uNahTLeEi6BQ6YH-fAtLj1XtuPAavRe-z-d-A/edit?usp=sharing"> Niglish</a></p> <p><a href="clib/cryptcontent/cc.html">Cope Compendium (WIP) </a></p> <p> Writings:</p>
-       <p><a href="https://docs.google.com/document/d/1N2I7ENjkFlKqoWMQV72g9BYx-9ehCWKMYZy8lC4hUKk/edit?usp=sharing">--CLICK HERE-- Principles of a free man (WIP) </a></p>  <p><a href="https://docs.google.com/document/d/1b95OEbKRfQ2J11etO5gMR1XkU0LRYcbb0UeKfriK0TU/edit?usp=sharing"> --CLICK HERE-- Worthy & unworthy material and consumption </a></p> <p><a href="https://docs.google.com/document/d/1GTfXA_YyVuRABWfJTXWIyzOgkKx7ZnAsZWzCVnOM_Rk/edit?usp=sharing">--CLICK HERE-- Main Character Syndrome (WIP) </a></p>
+     <div class="test2"> <h1> Crypt Compendium </h1> <p> Briefs:</p> <p class="yes2"><a href="https://docs.google.com/document/d/1F1cnyW7msQIviKmEVhButECgcdX-9SnW6HHCzb3tR3s/edit?usp=sharing"> Shiny metal rocks and their byproducts.</a></p>  <p class="yes2"><a href="https://www.enterthecrypt.net/cr/others.html">The Others (WIP) </a></p> <p class="yes2"><a href="https://docs.google.com/document/d/1HwzEi_uNahTLeEi6BQ6YH-fAtLj1XtuPAavRe-z-d-A/edit?usp=sharing"> Niglish</a></p> <p class="yes2"><a href="clib/cryptcontent/cc.html">Cope Compendium (WIP) </a></p> <p> Writings:</p>
+       <p class="yes2"><a href="https://docs.google.com/document/d/1N2I7ENjkFlKqoWMQV72g9BYx-9ehCWKMYZy8lC4hUKk/edit?usp=sharing">--CLICK HERE-- Principles of a free man (WIP) </a></p>  <p class="yes2"><a href="https://docs.google.com/document/d/1b95OEbKRfQ2J11etO5gMR1XkU0LRYcbb0UeKfriK0TU/edit?usp=sharing"> --CLICK HERE-- Worthy & unworthy material and consumption </a></p> <p class="yes2"><a href="https://docs.google.com/document/d/1GTfXA_YyVuRABWfJTXWIyzOgkKx7ZnAsZWzCVnOM_Rk/edit?usp=sharing">--CLICK HERE-- Main Character Syndrome (WIP) </a></p>
      </div>
    </div>
 <p class="monkey"> . </p>
    <div align="center">
-    <div class="test"> <p class="monkey"> . </p> <h1> User Profiles: </h1> <p><a href="clib/profiles/hook.html">Hook's Profile </a></p><p><a href="clib/profiles/wex.html">Example Profile (writing) </a></p>   <p><a href="clib/profiles/vex.html">Example Profile (video) </a></p>  <p><a href="clib/profiles/bex.html">Example Profile (blog) </a></p> </div>
+    <div class="test4"> <p class="monkey"> . </p> <h1> Author Profile: </h1> <p class="yes"><a href="clib/profiles/hook.html">Hook's Profile </a></p><p><a href="clib/profiles/wex.html"> </div>
   </div>
-  <p class="monkey"> . </p>
+<!--  <p class="monkey"> . </p>
   <div align="center">
   <div class="test3"><p class="monkey"> . </p> <h1> User Submissions: </h1> <p><a href="clib/usrcontnt/Document1.html">Example </a></p>   <p><a href="clib/yourdoc">Title </a></p>  <p><a href="clib/yourdoc">Title </a></p> <br>
- </div>
+ </div> -->
